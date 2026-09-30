@@ -1,35 +1,35 @@
 # Contributing
 
-This repository is currently a research and documentation-focused project for an enhanced NCNP detector used in 5G spectrum sensing and cognitive radio scenarios. The content in the current project materials indicates that the implementation is still being developed and validated, with several sections intentionally marked as placeholders.
+This repository currently contains documentation for an academic project on enhanced NCNP detection for 5G spectrum sensing in cognitive-radio scenarios. The repository does not currently contain MATLAB or LabVIEW implementation files, result data, or figures.
 
 ## Scope
 
-Contributions should stay aligned with the project goals described in the README:
+Contributions should stay aligned with the project focus described in the README:
 
 - enhanced non-coherent Neyman-Pearson detection for 5G spectrum sensing
 - emergency communication and disaster-scenario use cases
-- MATLAB-based simulation and analysis
-- LabVIEW/USRP hardware integration for real-time evaluation
+- documented MATLAB-based simulation and analysis
+- a documented LabVIEW/USRP hardware path
 
 ## Before contributing
 
 1. Review the root README and project overview.
 2. Check whether the issue or feature aligns with the current stage of the project.
-3. Keep any claims evidence-based. When a detail is not yet confirmed, record it as a placeholder instead of inventing a result or a configuration.
+3. Keep claims evidence-based. For missing project details, use `[INFORMATION NOT AVAILABLE IN CURRENT PROJECT FILES]` rather than inventing a result or configuration.
 
 ## Repository layout
 
-- `src/matlab/` — MATLAB simulation code and analysis scripts
-- `src/labview/` — LabVIEW and real-time hardware integration assets
+- `src/matlab/` — status of MATLAB simulation assets
+- `src/labview/` — status of LabVIEW hardware assets
 - `docs/` — project documentation and notes
-- `results/` — measured outcomes and summary metrics
-- `figures/` — plots, diagrams, and visual outputs
+- `results/` — status of result artifacts
+- `figures/` — status of figure artifacts
 
 ## Submission expectations
 
 - Keep documentation accurate and traceable to the underlying evidence.
 - If a result is based on simulation or hardware measurement, describe the assumptions and known limitations.
-- Tag or explain any placeholder sections so future contributors know which details still require confirmation.
+- Clearly identify details that are unavailable in the current project files.
 - Do not add unverified performance claims, frequency settings, or hardware configurations.
 
 ## Pull requests
