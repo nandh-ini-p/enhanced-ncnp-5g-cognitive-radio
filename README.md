@@ -1,175 +1,69 @@
 # Enhanced NCNP Detector for 5G Waveform Using Cognitive Radio During Disasters
 
-## 1. Project Title
-Enhanced NCNP Detector for 5G Waveform Using Cognitive Radio During Disasters
+## Overview
 
-## 2. Short technical description
-This project studies spectrum sensing for emergency communication using an enhanced Non-Coherent Neyman-Pearson (NCNP) detector in a 5G cognitive radio context. Based on the available project documentation, the work combines MATLAB-based simulation, energy-based detection, Wiener filtering, and a USRP-2901/LabVIEW implementation for signal acquisition and performance evaluation.
+This academic team project concerns spectrum sensing for 5G waveform detection in a cognitive-radio context during disaster scenarios. Repository documentation describes MATLAB simulation work and a LabVIEW/USRP-2901 hardware path. The repository currently contains documentation only; it does not include implementation files or experimental outputs.
 
-## 3. Problem Statement
-During natural disasters, conventional communication infrastructure may be disrupted or overloaded. In such conditions, reliable spectrum sensing is needed to identify available channels and support resilient emergency communication. The project addresses this by evaluating detector-based sensing in noisy and interference-prone conditions relevant to disaster scenarios.
+## Problem Statement
 
-## 4. Motivation
-Cognitive radio systems can detect idle spectrum and support dynamic access when communication resources are constrained. In disaster response scenarios, this is relevant for maintaining coordination, supporting emergency services, and improving the efficiency of limited wireless resources.
+The project addresses spectrum sensing when communication infrastructure may be disrupted or congested during emergencies. Its stated focus is detecting spectrum occupancy under noise and interference. The repository does not specify an operational deployment scenario or validated performance.
 
-## 5. Objectives
-- Investigate NCNP-based spectrum sensing for 5G waveform detection.
-- Analyze probability of detection (Pd) and probability of false alarm (Pfa) behavior under varying SNR conditions.
-- Evaluate the influence of filtering and noise conditioning on detection performance.
-- Examine a hardware-oriented implementation using USRP-2901 and LabVIEW.
-- Document the project in a research-oriented repository suitable for academic portfolio review.
+## Objectives
 
-## 6. System / Methodology Overview
-The project employs a cognitive radio workflow based on signal observation, noise evaluation, decision making, and performance assessment. The available documentation identifies the following stages:
-1. Signal acquisition and spectrum sensing.
-2. Energy-based detection and threshold comparison.
-3. Filtering or noise conditioning, including Wiener filtering.
-4. Probability-of-detection and false-alarm evaluation.
-5. ROC-based comparison and discussion of detection performance.
+- Study non-coherent Neyman-Pearson (NCNP) detection for 5G waveform spectrum sensing.
+- Describe analysis using probability of detection (Pd), probability of false alarm (Pfa), and receiver operating characteristic (ROC) curves.
+- Consider energy detection and Wiener filtering in the documented methodology.
+- Describe a LabVIEW/USRP-2901 hardware implementation path.
 
-## 7. Cognitive Radio Workflow
-- Acquire the received signal in the target band.
-- Estimate or compare the signal against the noise floor.
-- Apply detection logic based on the NCNP decision rule.
-- Decide whether the band is available or occupied.
-- Record detection performance metrics such as Pd and Pfa.
+These are objectives and methods described in project documentation; the repository does not contain source or results demonstrating their implementation.
 
-## 8. Proposed Detection Approach
-The available documentation describes a non-coherent Neyman-Pearson detector for signal detection under uncertain phase and signal conditions. The detector compares the received signal against a null hypothesis of noise-only conditions and an alternative hypothesis of signal plus noise.
+## System Architecture
 
-The earlier project description sketches an energy-based statistic and thresholding logic:
+No system architecture figure or verified end-to-end block diagram is committed. The documentation identifies MATLAB simulation and a LabVIEW/USRP-2901 hardware path, and mentions signal acquisition, detection, filtering, and Pd/Pfa or ROC analysis. The connections and processing order between these components are not established in the available files.
 
-```text
-Λ(x) = Σ |x[n]|²
-If Λ(x) > λ(Pfa), decide H1
-Else, decide H0
-```
+## Methodology
 
-The exact NCNP test statistic and threshold derivation remain [TO BE CONFIRMED] from the implementation; this expression should not be treated as a verified mathematical specification.
+Project documentation describes QAM-based signal generation, energy detection, NCNP hypothesis testing (noise-only versus signal-plus-noise), Wiener filtering/noise conditioning, and Pd/Pfa and ROC analysis. The exact detector statistic, threshold derivation, processing flow, and evaluation procedure are not specified by source code or reproducible records in this repository.
 
-## 9. MATLAB Simulation
-The project documentation indicates MATLAB-based simulation for 5G waveform and detection analysis. The available evidence includes the following tasks:
-- QAM-based signal generation
-- energy detection
-- Pd/Pfa analysis versus SNR
-- noise and filter comparison
-- ROC curve generation
-- Wiener filtering
+## MATLAB Simulation
 
-Specific simulation parameters such as FFT size, sample rate, duration, SNR range, and number of Monte Carlo trials are not yet documented in the repository and are therefore marked as [TO BE CONFIRMED].
+The documentation identifies MATLAB simulation for QAM signal generation and detection/performance analysis. No MATLAB source files, simulation configuration, or execution instructions are present. Exact parameters and simulation outputs: [INFORMATION NOT AVAILABLE IN CURRENT PROJECT FILES].
 
-## 10. Hardware / Software Implementation
-### 10.1 USRP-2901
-The project documentation describes a USRP-2901-based hardware implementation for software-defined radio experimentation, with signal acquisition and receiver-side work in a LabVIEW environment. The repository does not include hardware configuration files or measurement records.
+## Results
 
-### 10.2 LabVIEW
-The available documentation identifies LabVIEW as the implementation environment for USRP control, real-time signal monitoring, and hardware-based receiver design.
+No plots, result tables, measurement records, or quantitative observations are committed. There are no simulation or hardware results to report.
 
-### 10.3 MATLAB
-MATLAB is used for simulation, signal generation, detection analysis, and evaluation of filtering effects.
+## Hardware Implementation
 
-Specific system settings such as exact USRP frequency range, IQ rate, gain, and ADC/DAC parameters are not yet fully documented in the checked-in repository and are marked as [TO BE CONFIRMED].
+The documentation identifies LabVIEW and USRP-2901 as part of the intended hardware path. No LabVIEW project or VI files, hardware configuration, or measurement records are present. Hardware settings and implementation status beyond the documentation: [INFORMATION NOT AVAILABLE IN CURRENT PROJECT FILES].
 
-## 11. Results
-The repository currently does not contain numerical results, plots, or quantitative summary tables. The project documentation describes MATLAB simulation and LabVIEW/USRP implementation as project components, and lists Pd/Pfa analysis, ROC comparisons, and Wiener filtering as evaluation work. The status and measurements for these activities are not independently documented in the repository. Results should therefore be treated as [RESULTS TO BE ADDED].
+## Technologies Used
 
-## 12. System Architecture / Block Diagram
-```text
-5G signal / spectrum band
-          |
-          v
-    Signal acquisition
-          |
-          v
-    Noise / filtering stage
-    (Wiener filtering, noise conditioning)
-          |
-          v
-   NCNP detector / energy decision
-          |
-          +---------------------------+
-          |                           |
-          v                           v
-      H0: noise only            H1: signal + noise
-          |
-          v
-   Pd, Pfa, ROC, and detection metrics
-```
+The project documentation names MATLAB, LabVIEW, and USRP-2901. It also discusses QAM signal generation, energy detection, Wiener filtering, and Pd/Pfa and ROC analysis; these are documented project methods, not checked-in software implementations.
 
-## 13. Technologies Used
-- MATLAB
-- LabVIEW
-- USRP-2901
-- Cognitive radio concept and spectrum sensing
-- QAM-based waveform generation
-- Energy detection
-- Wiener filtering
-- ROC and Pd/Pfa analysis
-- Git and GitHub for repository management
+## Team Project
 
-## 14. Project Contributions
-This project was developed as part of a team project. Individual team member contributions are not fully documented in the available repository materials, so the repository intentionally avoids assigning individual component ownership beyond the collective project work.
+The repository describes this as a team academic project. Team membership and individual contributions: [INFORMATION NOT AVAILABLE IN CURRENT PROJECT FILES].
 
-## 15. Limitations
-- Quantitative results and final plots are not yet included in the repository.
-- Exact waveform parameters and simulation settings remain [TO BE CONFIRMED].
-- Exact USRP frequency range, sample rate, and hardware configuration remain [TO BE CONFIRMED].
-- The repository does not yet contain final source code, measured data files, or formal validation records.
-- The project documentation suggests analysis in noisy and disaster-relevant environments, but the precise operational conditions are not fully specified in the checked-in files.
+## Limitations
 
-## 16. Future Work
-- Finalize and document quantitative simulation results.
-- Add measured data and performance plots for Pd/Pfa and ROC comparisons.
-- Document exact MATLAB and LabVIEW implementation parameters.
-- Validate the system under additional noise, filtering, and channel scenarios.
-- Extend the project documentation with a formal bibliography and test configuration notes.
+- The repository contains documentation, not MATLAB or LabVIEW source.
+- No architecture figure, numerical results, plots, measurement records, or reproducible validation steps are included.
+- Exact simulation and hardware settings, detector specification, and implementation status are not established.
+- The repository does not contain formal bibliographic references.
 
-## 17. References
-The project documentation describes or proposes work in the following areas:
-- 5G communication and cognitive radio
-- NCNP-based spectrum sensing
-- energy detection
-- QAM waveform generation
-- USRP-2901 hardware testing
-- Wiener filtering and noise suppression
-- ROC analysis and detection metrics
+## Future Work
 
-Formal citations for each topic are not yet included in the repository and should be added as [TO BE CONFIRMED].
+Add the actual source and configuration files, document the verified detector and processing flow, and include reproducible simulation or hardware evidence when available. Record exact settings and cite the sources used. These are documentation and evidence gaps; this README does not claim those activities have been completed.
 
-## 18. Disclaimer / Academic Note
-This repository is intended as a research-oriented academic portfolio artifact for an Electronics and Communication Engineering project. It is based only on the available project documentation and does not claim unsupported numerical or performance results. Where details are missing, they are marked as [TO BE CONFIRMED] rather than inferred.
+## References
 
-## 19. Repository Structure
-```text
-enhanced-ncnp-5g-cognitive-radio/
-├── README.md
-├── .gitignore
-├── CONTRIBUTING.md
-├── LICENSE                         # License selection remains unconfirmed
-├── SECURITY.md
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── config.yml
-│   │   └── feature_request.md
-│   └── PULL_REQUEST_TEMPLATE.md
-├── docs/
-│   └── project-overview.md
-├── src/
-│   ├── matlab/
-│   │   └── README.md
-│   └── labview/
-│       └── README.md
-├── results/
-│   └── README.md
-└── figures/
-    └── README.md
-```
+Formal references: [INFORMATION NOT AVAILABLE IN CURRENT PROJECT FILES].
 
-The current repository state includes documentation placeholders for MATLAB/LabVIEW work, results, and figures; implementation files, measured results, and figure assets are not yet present.
+## Repository Contents
 
-## 20. Current Status
-This repository is best understood as a documentation and project-structure scaffold for an academic research project in progress. The available evidence supports the core technical direction, but the final implementation and quantitative results remain to be added.
-
-## 21. Verification Notes
-The project facts included here are based on the project documentation present in the repository. Where the repository does not include enough evidence, the text intentionally uses [TO BE CONFIRMED] instead of making assumptions.
+- `docs/project-overview.md` — evidence-based summary of the project documentation.
+- `src/matlab/README.md` — status of MATLAB assets.
+- `src/labview/README.md` — status of LabVIEW assets.
+- `figures/README.md` — status of figure assets.
+- `results/README.md` — status of result assets.
