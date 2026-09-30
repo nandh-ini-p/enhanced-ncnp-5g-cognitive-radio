@@ -1,0 +1,27 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# MATLAB / Simulink
+*.asv
+*.m~
+*.mex*
+*.slxc
+*.autosave
+*.bak
+
+# LabVIEW
+*.aliases
+*.lvlps
+*.suo
+*.db
+
+# Logs and temporary artifacts
+*.log
+*.tmp
+*.temp
+
+# Python (if used for support scripts)
+__pycache__/
+*.py[cod]
